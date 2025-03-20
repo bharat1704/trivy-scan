@@ -26,10 +26,22 @@ jobs:
       - name: Install Dependencies
         run: npm install
       
-      - name: Check Code
-        run: echo "hi bharat, evertything seems fine till now"
-  
-  
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.AWS_EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.AWS_PRIVATE_KEY }}
+          script: |
+            cd Day-1
+            ls
 
     
