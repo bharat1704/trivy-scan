@@ -73,15 +73,6 @@ The application is automatically deployed to AWS EC2 when changes are pushed to 
 4. Configuring environment variables
 5. Restarting the service
 
-## Environment Setup
-
-### Required Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-```env
-PORT=3000
-NODE_ENV=production
-```
 
 ### AWS EC2 Setup
 
@@ -103,7 +94,7 @@ node index.js
 
 ### Production
 
-The application is automatically deployed and accessible at your EC2 instance's public IP:
+The application can automatically deploy and accessible at EC2 instance's public IP:
 ```
 http://<your-ec2-public-ip>:3000
 ```
@@ -156,15 +147,3 @@ Node.js Application
 ```bash
 pm2 logs
 ```
-
-## License
-
-This project is licensed under the ISC License.
-
-## Author
-
-Bharat
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. The CI/CD pipeline will automatically run tests and deploy changes to the staging environment.
