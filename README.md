@@ -13,7 +13,10 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 - JSON response format
 - Automated CI/CD pipeline using GitHub Actions
 - Automated deployment to AWS EC2
+<<<<<<< HEAD
 - Environment-based configuration
+=======
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## Prerequisites
 
@@ -22,6 +25,10 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 - AWS Account with EC2 instance
 - GitHub Account
 - SSH access to EC2 instance
+<<<<<<< HEAD
+=======
+- SSH Keygen
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## CI/CD Pipeline
 
@@ -31,14 +38,21 @@ The project uses GitHub Actions for continuous integration and deployment. The p
    - Code checkout
    - Node.js setup
    - Dependency installation
+<<<<<<< HEAD
    - Code linting
+=======
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
    - Build verification
 
 2. **Continuous Deployment**:
    - Automated deployment to AWS EC2
+<<<<<<< HEAD
    - Environment variable configuration
    - Service restart
    - Health check verification
+=======
+   - Service restart using pm2
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## Installation
 
@@ -71,6 +85,7 @@ The application is automatically deployed to AWS EC2 when changes are pushed to 
 1. Building the application
 2. Transferring files to EC2
 3. Installing dependencies
+<<<<<<< HEAD
 4. Configuring environment variables
 5. Restarting the service
 
@@ -83,6 +98,10 @@ Create a `.env` file in the root directory with the following variables:
 PORT=3000
 NODE_ENV=production
 ```
+=======
+5. Restarting the service
+
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ### AWS EC2 Setup
 
@@ -97,14 +116,22 @@ NODE_ENV=production
 
 1. Start the server:
 ```bash
+<<<<<<< HEAD
 node index.js
+=======
+pm2 start index.js
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 ```
 
 2. Access the API at `http://localhost:3000`
 
 ### Production
 
+<<<<<<< HEAD
 The application is automatically deployed and accessible at your EC2 instance's public IP:
+=======
+The application can automatically deploy and accessible at EC2 instance's public IP:
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 ```
 http://<your-ec2-public-ip>:3000
 ```
@@ -157,6 +184,7 @@ Node.js Application
 ```bash
 pm2 logs
 ```
+<<<<<<< HEAD
 
 ## License
 
@@ -169,3 +197,5 @@ Bharat Saini
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. The CI/CD pipeline will automatically run tests and deploy changes to the staging environment.
+=======
+>>>>>>> ae246774ca646b713afdb10f63afa0105252243f
