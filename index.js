@@ -9,7 +9,7 @@ app.get("/", function(req,res){
     },
     {
         name:"Bharat Saini",
-        email:"sainin@gmail.com"
+        email:"saini@gmail.com"
 }]
 )
 })
