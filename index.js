@@ -4,8 +4,8 @@ const app = express();
 app.get("/", function(req,res){
 
     res.json({
-        name:"Test",
-        email: "test@gmail.com"
+        name:"AWS",
+        email: "AWs@gmail.com"
     })
 })
 
