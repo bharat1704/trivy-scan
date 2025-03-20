@@ -84,7 +84,7 @@ The application is automatically deployed to AWS EC2 when changes are pushed to 
 
 1. Start the server:
 ```bash
-node index.js
+pm2 start index.js
 ```
 
 2. Access the API at `http://localhost:3000`
