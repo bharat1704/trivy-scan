@@ -16,7 +16,6 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 <<<<<<< HEAD
 - Environment-based configuration
 =======
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## Prerequisites
 
@@ -28,7 +27,6 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 <<<<<<< HEAD
 =======
 - SSH Keygen
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## CI/CD Pipeline
 
@@ -41,8 +39,8 @@ The project uses GitHub Actions for continuous integration and deployment. The p
 <<<<<<< HEAD
    - Code linting
 =======
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
-   - Build verification
+
+- Build verification
 
 2. **Continuous Deployment**:
    - Automated deployment to AWS EC2
@@ -52,7 +50,6 @@ The project uses GitHub Actions for continuous integration and deployment. The p
    - Health check verification
 =======
    - Service restart using pm2
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 
 ## Installation
 
@@ -120,7 +117,6 @@ NODE_ENV=production
 node index.js
 =======
 pm2 start index.js
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 ```
 
 2. Access the API at `http://localhost:3000`
@@ -131,7 +127,6 @@ pm2 start index.js
 The application is automatically deployed and accessible at your EC2 instance's public IP:
 =======
 The application can automatically deploy and accessible at EC2 instance's public IP:
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
 ```
 http://<your-ec2-public-ip>:3000
 ```
@@ -186,16 +181,4 @@ pm2 logs
 ```
 <<<<<<< HEAD
 
-## License
 
-This project is licensed under the ISC License.
-
-## Author
-
-Bharat Saini
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. The CI/CD pipeline will automatically run tests and deploy changes to the staging environment.
-=======
->>>>>>> ae246774ca646b713afdb10f63afa0105252243f
