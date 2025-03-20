@@ -13,7 +13,6 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 - JSON response format
 - Automated CI/CD pipeline using GitHub Actions
 - Automated deployment to AWS EC2
-- Environment-based configuration
 
 ## Prerequisites
 
@@ -36,7 +35,6 @@ The project uses GitHub Actions for continuous integration and deployment. The p
 
 2. **Continuous Deployment**:
    - Automated deployment to AWS EC2
-   - Environment variable configuration
    - Service restart using pm2
 
 ## Installation
@@ -70,7 +68,6 @@ The application is automatically deployed to AWS EC2 when changes are pushed to 
 1. Building the application
 2. Transferring files to EC2
 3. Installing dependencies
-4. Configuring environment variables
 5. Restarting the service
 
 
