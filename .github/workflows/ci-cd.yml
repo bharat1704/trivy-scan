@@ -25,13 +25,13 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-        node-version: "18"  
+          node-version: "18"  
       
       - name: Install Dependencies
         uses: npm install
       
-      - name: Check Code
-        uses: echo "hi bharat, evertything seems fine till now"
+      # - name: Check Code
+      #   uses: echo "hi bharat, evertything seems fine till now"
   
   
 
