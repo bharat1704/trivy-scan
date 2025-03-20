@@ -7,8 +7,8 @@ app.get("/", function(req,res){
         name:"AWS",
         email: "aws@gmail.com"
     },
-    {name:"AWS2",
-    email:"aws2@gmail.com"
+    {name:"bharat2",
+    email:"bharat@gmail.com"
 }]
 )
 })
