@@ -22,6 +22,7 @@ This project demonstrates a complete CI/CD workflow for a Node.js application. I
 - AWS Account with EC2 instance
 - GitHub Account
 - SSH access to EC2 instance
+- SSH Keygen
 
 ## CI/CD Pipeline
 
@@ -31,14 +32,12 @@ The project uses GitHub Actions for continuous integration and deployment. The p
    - Code checkout
    - Node.js setup
    - Dependency installation
-   - Code linting
    - Build verification
 
 2. **Continuous Deployment**:
    - Automated deployment to AWS EC2
    - Environment variable configuration
-   - Service restart
-   - Health check verification
+   - Service restart using pm2
 
 ## Installation
 
