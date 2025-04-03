@@ -1,0 +1,17 @@
+
+name: Image Scanning in CI/CD
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: build Docker image
+        run: |
+          echo "hi there"
