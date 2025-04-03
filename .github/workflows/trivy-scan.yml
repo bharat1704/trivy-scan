@@ -33,4 +33,24 @@ jobs:
           format: "table"
           exit-code: 1
           severity: "CRITICAL, HIGH"
+
+      - name: Generate Trivy report 
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: "bharatmali1704/day2:latest"
+          format: "json"
+          output: "trivy-report.json"
+
+      - name: Upload Report as Artifact     
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-security-report
+          path: trivy-report.json
       
+      # - name: Alert through Slack
+      #   if: failure()
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      #     SLACK_MESSAGE: "⚠️ Security Alert! Trivy found vulnerabilities in Docker image."
+      #     SLACK_COLOR: "#ff0000"
