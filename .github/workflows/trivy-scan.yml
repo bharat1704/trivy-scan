@@ -9,6 +9,8 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: "30 18 * * *"    
         
 
 jobs:
@@ -44,6 +46,7 @@ jobs:
           image-ref: "bharatmali1704/day2:latest"
           format: "json"
           output: "trivy-report.json"
+          continue-on-error: true
       
 
       - name: Upload Report as Artifact     
@@ -52,10 +55,10 @@ jobs:
           name: trivy-security-report
           path: trivy-report.json
       
-      # - name: Alert through Slack
-      #   if: failure()
-      #   uses: rtCamp/action-slack-notify@v2
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      #     SLACK_MESSAGE: "⚠️ Security Alert! Trivy found vulnerabilities in Docker image."
-      #     SLACK_COLOR: "#ff0000"
+      - name: Alert through Slack
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "Security Alert! Trivy found vulnerabilities in the Docker image."
+          SLACK_COLOR: "#ff0000"
