@@ -1,0 +1,35 @@
+
+name: Image Scanning in CI/CD
+
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+        
+
+jobs:
+  image_scanning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: install trivy
+        run: |
+          sudo apt-get update
+          sudo apt install trivy -y wget
+          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_Linux-64bit.tar.gz
+          tar zxvf trivy_Linux-64bit.tar.gz
+          sudo mv trivy /usr/local/bin/
+
+      - name: Login to DockerHub
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: build image
+        run: docker build -t bharatmali1704/day2:latest . 
+            
