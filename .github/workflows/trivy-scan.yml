@@ -30,12 +30,12 @@ jobs:
       - name: build image
         run: docker build -t bharatmali1704/day2:latest . 
 
-      - name: Trivy scanning plugin
+      - name: Image scanning Step through Trivy
         uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: "bharatmali1704/day2:latest"
           format: "table"
-          exit-code: 0
+          exit-code: 1
           severity: "CRITICAL,HIGH"
 
       - name: Generate Trivy report 
