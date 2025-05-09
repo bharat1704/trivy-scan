@@ -10,9 +10,7 @@ on:
       - "README.MD"  
   pull_request:
     branches:
-      - main
-  schedule:
-    - cron: "30 18 * * *"    
+      - main  
         
 
 jobs:
